@@ -24,10 +24,18 @@ jobs: # Sequence of jobs for this workflow
             workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
             service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
      
-        - name: Deploy hello_world_function
+        - name: Deploy first hello_world_function
           run: |
             gcloud functions deploy hello_world_function \
             --region europe-west1 \
             --source cloud_functions/hello_world \
+            --trigger-http \
+            --runtime python39
+
+        - name: Deploy second hello_world_function
+          run: |
+            gcloud functions deploy hello_world_function_2 \
+            --region europe-west1 \
+            --source cloud_functions/hello_world_2 \
             --trigger-http \
             --runtime python39
