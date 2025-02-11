@@ -34,9 +34,8 @@ jobs: # Sequence of jobs for this workflow
 
         - name: Deploy second hello_world_function
           run: |
-            gcloud functions deploy hello_world_function_3 \
+            gcloud functions deploy hello_world_function_2 \
             --region europe-west1 \
             --source cloud_functions/hello_world_2 \
             --trigger-http \
             --runtime python39
-            --entryPoint hello_world
