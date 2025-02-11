@@ -27,10 +27,7 @@ jobs: # Sequence of jobs for this workflow
         - name: Deploy first hello_world_function
           run: |
             gcloud functions deploy hello_world_function \
-            --region europe-west1 \
             --source cloud_functions/hello_world \
-            --trigger-http \
-            --runtime python39
 
         - name: Deploy second hello_world_function
           run: |
@@ -39,3 +36,4 @@ jobs: # Sequence of jobs for this workflow
             --source cloud_functions/hello_world_2 \
             --trigger-http \
             --runtime python39
+            --allow-unauthenticated
