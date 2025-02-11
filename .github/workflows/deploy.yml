@@ -39,5 +39,5 @@ jobs: # Sequence of jobs for this workflow
             --source cloud_functions/hello_world_2 \
             --trigger-http \
             --runtime python39 \
-            --entryPoint hello_world \
+            --entry-point hello_world \
             --allow-unauthenticated \
