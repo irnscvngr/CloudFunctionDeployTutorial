@@ -28,6 +28,7 @@ jobs: # Sequence of jobs for this workflow
           run: |
             gcloud functions deploy hello_world_function \
             --source cloud_functions/hello_world \
+            --region europe-west1 \
             --runtime python39 \
             --trigger-http \
 
