@@ -39,6 +39,6 @@ jobs: # Sequence of jobs for this workflow
             --source cloud_functions/hello_world_2 \
             --trigger-http \
             --runtime python39
-            --entryPoint main
+            --entryPoint hello_world
             --timeout 60s
             --memoryMb 256
